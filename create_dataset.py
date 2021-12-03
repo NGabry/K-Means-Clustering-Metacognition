@@ -36,15 +36,15 @@ if __name__ == '__main__':
     MAS_M = []
     PD_Traits = []
     for i in range (0,33333):
-        s   = randrange_float(3,5.5,.5)
+        s   = randrange_float(3,4.5,.5)
         MAS_S.append(s)
-        o   = randrange_float(2,3.5,.5)
+        o   = randrange_float(2,2.5,.5)
         MAS_O.append(o)
-        d   = randrange_float(0,1.5,.5)
+        d   = randrange_float(0,1,.5)
         MAS_D.append(d)
-        m   = randrange_float(1,4,.5)
+        m   = randrange_float(1,3,.5)
         MAS_M.append(m)
-        pdt = random.randint(23,50)
+        pdt = random.randint(28,50)
         PD_Traits.append(pdt)
 
     df2 = pd.DataFrame(list(zip(MAS_S, MAS_O, MAS_D, MAS_M, PD_Traits)),
@@ -57,15 +57,15 @@ if __name__ == '__main__':
     MAS_M = []
     PD_Traits = []
     for i in range (0,33333):
-        s   = randrange_float(5.5,8,.5)
+        s   = randrange_float(6,8,.5)
         MAS_S.append(s)
-        o   = randrange_float(4,6,.5)
+        o   = randrange_float(4.5,6,.5)
         MAS_O.append(o)
         d   = randrange_float(1.5,3,.5)
         MAS_D.append(d)
-        m   = randrange_float(4.5,8,.5)
+        m   = randrange_float(5,8,.5)
         MAS_M.append(m)
-        pdt = random.randint(23,50)
+        pdt = random.randint(37,50)
         PD_Traits.append(pdt)
 
     df3 = pd.DataFrame(list(zip(MAS_S, MAS_O, MAS_D, MAS_M, PD_Traits)),
