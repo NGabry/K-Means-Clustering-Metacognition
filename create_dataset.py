@@ -15,13 +15,13 @@ if __name__ == '__main__':
     MAS_M = []
     PD_Traits = []
     for i in range (0,33333):
-        s   = randrange_float(5.5,8,.5)
+        s   = randrange_float(5.5,8,.01)
         MAS_S.append(s)
-        o   = randrange_float(4,6,.5)
+        o   = randrange_float(4,6,.01)
         MAS_O.append(o)
-        d   = randrange_float(1.5,3,.5)
+        d   = randrange_float(1.5,3,.01)
         MAS_D.append(d)
-        m   = randrange_float(4.5,8,.5)
+        m   = randrange_float(4.5,8,.01)
         MAS_M.append(m)
         pdt = random.randint(0,27)
         PD_Traits.append(pdt)
@@ -36,13 +36,13 @@ if __name__ == '__main__':
     MAS_M = []
     PD_Traits = []
     for i in range (0,33333):
-        s   = randrange_float(3,4.5,.5)
+        s   = randrange_float(3,4.5,.01)
         MAS_S.append(s)
-        o   = randrange_float(2,2.5,.5)
+        o   = randrange_float(2,2.5,.01)
         MAS_O.append(o)
-        d   = randrange_float(0,1,.5)
+        d   = randrange_float(0,1,.01)
         MAS_D.append(d)
-        m   = randrange_float(1,3,.5)
+        m   = randrange_float(1,3,.01)
         MAS_M.append(m)
         pdt = random.randint(28,50)
         PD_Traits.append(pdt)
@@ -57,13 +57,13 @@ if __name__ == '__main__':
     MAS_M = []
     PD_Traits = []
     for i in range (0,33333):
-        s   = randrange_float(6,8,.5)
+        s   = randrange_float(6,8,.01)
         MAS_S.append(s)
-        o   = randrange_float(4.5,6,.5)
+        o   = randrange_float(4.5,6,.01)
         MAS_O.append(o)
-        d   = randrange_float(1.5,3,.5)
+        d   = randrange_float(1.5,3,.01)
         MAS_D.append(d)
-        m   = randrange_float(5,8,.5)
+        m   = randrange_float(5,8,.01)
         MAS_M.append(m)
         pdt = random.randint(37,50)
         PD_Traits.append(pdt)
