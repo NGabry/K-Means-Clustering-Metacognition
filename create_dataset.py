@@ -1,27 +1,27 @@
 import random
 
-import numpy as np
 import pandas as pd
 
-def randrange_float(start, stop, step):
-    return random.randint(0, int((stop-start) / step)) * step + start
+
+def randrange_float(lower, upper):
+    return random.normalvariate(((upper+lower)/2), (((upper-lower)/4)))
 
 if __name__ == '__main__':
 
-    #Make a high-MC low-PD dataframe
+    # Make a high-MC low-PD dataframe
     MAS_S = []
     MAS_O = []
     MAS_D = []
     MAS_M = []
     PD_Traits = []
-    for i in range (0,33333):
-        s   = randrange_float(5.5,8,.01)
+    for i in range(0,33333):
+        s   = randrange_float(5.5,8)
         MAS_S.append(s)
-        o   = randrange_float(4,6,.01)
+        o   = randrange_float(4,6)
         MAS_O.append(o)
-        d   = randrange_float(1.5,3,.01)
+        d   = randrange_float(1.5,3)
         MAS_D.append(d)
-        m   = randrange_float(4.5,8,.01)
+        m   = randrange_float(4.5,8)
         MAS_M.append(m)
         pdt = random.randint(0,27)
         PD_Traits.append(pdt)
@@ -29,20 +29,20 @@ if __name__ == '__main__':
     df1 = pd.DataFrame(list(zip(MAS_S, MAS_O, MAS_D, MAS_M, PD_Traits)),
                       columns = (['MAS_S', 'MAS_O', 'MAS_D', 'MAS_M', 'PD']))
 
-    #Make a low-MC high-PD dataframe
+    # Make a low-MC high-PD dataframe
     MAS_S = []
     MAS_O = []
     MAS_D = []
     MAS_M = []
     PD_Traits = []
-    for i in range (0,33333):
-        s   = randrange_float(3,4.5,.01)
+    for i in range(0,33333):
+        s   = randrange_float(3,4.5)
         MAS_S.append(s)
-        o   = randrange_float(2,2.5,.01)
+        o   = randrange_float(2,2.5)
         MAS_O.append(o)
-        d   = randrange_float(0,1,.01)
+        d   = randrange_float(0,1)
         MAS_D.append(d)
-        m   = randrange_float(1,3,.01)
+        m   = randrange_float(1,3)
         MAS_M.append(m)
         pdt = random.randint(28,50)
         PD_Traits.append(pdt)
@@ -50,20 +50,20 @@ if __name__ == '__main__':
     df2 = pd.DataFrame(list(zip(MAS_S, MAS_O, MAS_D, MAS_M, PD_Traits)),
                       columns = (['MAS_S', 'MAS_O', 'MAS_D', 'MAS_M', 'PD']))
 
-    #Make a high-MC high-PD dataframe
+    # Make a high-MC high-PD dataframe
     MAS_S = []
     MAS_O = []
     MAS_D = []
     MAS_M = []
     PD_Traits = []
-    for i in range (0,33333):
-        s   = randrange_float(6,8,.01)
+    for i in range(0,33333):
+        s   = randrange_float(6,8)
         MAS_S.append(s)
-        o   = randrange_float(4.5,6,.01)
+        o   = randrange_float(4.5,6)
         MAS_O.append(o)
-        d   = randrange_float(1.5,3,.01)
+        d   = randrange_float(1.5,3)
         MAS_D.append(d)
-        m   = randrange_float(5,8,.01)
+        m   = randrange_float(5,8)
         MAS_M.append(m)
         pdt = random.randint(37,50)
         PD_Traits.append(pdt)
@@ -71,11 +71,10 @@ if __name__ == '__main__':
     df3 = pd.DataFrame(list(zip(MAS_S, MAS_O, MAS_D, MAS_M, PD_Traits)),
                       columns = (['MAS_S', 'MAS_O', 'MAS_D', 'MAS_M', 'PD']))
 
-
-    #Concatenage all dataframes
+    # Concatenate all dataframes
     full_df = pd.concat([df1,df2,df3], ignore_index=True)
 
-    #Sprinkle in random 999s
+    # Sprinkle in random 999s
     ids_to_alt = []
     for i in range (0,156):
         j = random.randint(0,99999)
